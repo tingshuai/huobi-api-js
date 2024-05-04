@@ -1,6 +1,6 @@
 {
-  "name": "huobi-api-js",
-  "version": "1.0.0",
+  "name": "huobi-api-ts",
+  "version": "1.0.2",
   "description": "This is a non-official HuoBi Rest API nodejs module which support for signature version 2.",
   "keywords": [],
   "main": "dist/lib/main.js",

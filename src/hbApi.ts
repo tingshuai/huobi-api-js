@@ -165,14 +165,14 @@ class HbApi {
             const data: HbRawAPIResponse = response.data
             if (data?.status == 'ok' || data?.code == 200) {
                 this.logger.debug(`API call success. method=[${method}], url=[${url}]`)
-                return data?.data ?? null
+                return { ...data }
             } else {
                 this.logger.error(`API return error. method=[${method}], url=[${url}]`, {
                     data,
                 })
-                return null
+                return { ...data }
             }
-        } catch (error) {
+        } catch (error: any) {
             this.logger.error(`API error. method=[${method}], url=[${url}]`, {
                 error: error.message,
                 stack: error.stack,
